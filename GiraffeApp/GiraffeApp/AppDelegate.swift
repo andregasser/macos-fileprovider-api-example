@@ -49,6 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         let manager = NSFileProviderManager(for: domain)
+               
         manager?.signalEnumerator(for: .rootContainer) { error in
             if (error != nil) {
                 os_log(.error, "signalEnumerator failed: %{public}@", error!.localizedDescription)
