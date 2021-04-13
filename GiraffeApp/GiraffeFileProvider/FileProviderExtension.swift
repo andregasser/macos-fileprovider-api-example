@@ -9,10 +9,10 @@ import FileProvider
 import os.log
 
 class FileProviderExtension: NSObject, NSFileProviderReplicatedExtension {
+    
     required init(domain: NSFileProviderDomain) {
         super.init()
         os_log(.info, "init called!")
-
     }
     
     func invalidate() {

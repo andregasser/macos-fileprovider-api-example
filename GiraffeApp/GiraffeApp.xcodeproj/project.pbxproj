@@ -384,7 +384,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.swisscom.GiraffeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foo.GiraffeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -405,7 +405,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.swisscom.GiraffeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foo.GiraffeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -424,7 +424,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.swisscom.GiraffeApp.GiraffeFileProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foo.GiraffeApp.GiraffeFileProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -444,7 +444,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.swisscom.GiraffeApp.GiraffeFileProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foo.GiraffeApp.GiraffeFileProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

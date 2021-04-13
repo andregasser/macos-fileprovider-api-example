@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.ch.swisscom.GiraffeApp</string>
+		<string>group.com.foo.GiraffeApp</string>
 	</array>
 	<key>com.apple.security.assets.movies.read-write</key>
 	<true/>

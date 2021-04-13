@@ -19,10 +19,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // List registered domains
         NSFileProviderManager.getDomainsWithCompletionHandler() { domains, error in
             if (error != nil) {
-                os_log(.error, "\(error as NSError?!)")
+                os_log(.error, "%{public}@", error!.localizedDescription)
             } else {
                 for domain in domains {
-                    os_log(.info, "Registered domain: \(domain.identifier)")
+                    os_log(.info, "Registered domain: %{public}@", domain.identifier.rawValue)
                 }
             }
         }
@@ -42,17 +42,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let domain = NSFileProviderDomain(identifier: NSFileProviderDomainIdentifier(domainIdentifier), displayName: domainDisplayName)
         NSFileProviderManager.add(domain) { error in
             if (error != nil) {
-                os_log(.error, "Unable to add file provider domain: \(error as NSError?)")
+                os_log(.error, "Unable to add file provider domain: %{public}@", error!.localizedDescription)
             } else {
-                os_log(.info, "Successfully added file provider domain: \(domainIdentifier)")
+                os_log(.info, "Successfully added file provider domain: %{public}@", domainIdentifier)
             }
-            
         }
         
         let manager = NSFileProviderManager(for: domain)
         manager?.signalEnumerator(for: .rootContainer) { error in
             if (error != nil) {
-                os_log(.error, "signalEnumerator failed: %{public}@", error)
+                os_log(.error, "signalEnumerator failed: %{public}@", error!.localizedDescription)
             } else {
                 os_log(.info, "signalEnumerator succeeded")
             }
@@ -62,7 +61,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
 
 }
 
